@@ -14,3 +14,26 @@
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <script src="path/to/your/javascript-file.js"></script>
+</head>
+<body>
+  <!-- Your HTML content here -->
+</body>
+</html>
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
+  }
+});
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowLeft") {
+    const leftNumbers = dodger.style.left.replace("px", "");
+    const left = parseInt(leftNumbers, 10);
+
+    dodger.style.left = `${left - 1}px`;
+  }
+});
